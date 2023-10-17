@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Galada&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/************************************************** HEADER **************************************************/
+header
+{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+header.active
+{
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 30px -20px black;
+}
+
+/********* LOGO *********/
+header .logo h1
+{
+    font-size: 25px;
+    color: #62afb4;
+}
+
+header .logo h1 span
+{
+    color: #94e6ec;
+}
+
+/********* NAV *********/
+nav ul
+{
+    list-style: none;
+    display: flex;
+}
+
+ul li
+{
+    padding: 10px 20px 0px;
+}
+
+li a
+{
+    font-size: 18px;
+    padding: 10px;
+    color: #62afb4;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+
+li a:hover
+{
+    color: #fff;
+    background-color: #62afb4;
+}
+
+#icon_menu
+{
+    font-size: 25px;
+    color: #62afb4;
+    display: none;
+    cursor: pointer;
+}
+
+/************************************************** INICIO **************************************************/
+.inicio
+{
+    width: 100%;
+    height: 100%;
+    padding: 130px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio .contenido
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+}
+
+.img_inicio
+{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: #62afb4 solid 2px;
+}
+
+.img_inicio img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.mensaje h1
+{
+    font-size: 40px;
+    color: #62afb4;
+    font-family: 'Abel';
+}
+
+.mensaje a,
+.contac .datos_contacto a
+{
+    padding: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #62afb4;
+    border: 2px #62afb4 solid;
+    background-color: transparent;
+    transition: all .3s ease-in;
+}
+
+.mensaje a:hover,
+.contac .datos_contacto a:hover
+{
+    color: #fff;
+    background-color: #62afb4;
+}
+
+/************************************************** PERFIL **************************************************/
+.perfil
+{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    background-color: #ecebeb;
+}
+
+.perfil .datos
+{
+    width: 98%;
+    height: 100%;
+    display: flex;
+}
+
+.datos .foto
+{
+    width: 35%;
+}
+
+.datos .info
+{
+    width: 75%;
+    height: 100%;
+}
+
+.foto img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.info .sobre_mi
+{
+    margin-bottom: 15px;
+}
+
+.sobre_mi h2
+{
+    color: #62afb4;
+}
+
+.sobre_mi p
+{
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.mas_info
+{
+    height: 250px;
+}
+
+.mas_info .link b
+{
+    color: #62afb4;
+    margin-right: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.link b::before
+{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    background-color: #62afb4;
+    transition: all 0.5s;
+}
+
+.link b:hover::before
+{
+    width: 100%;
+}
+
+b.activo::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    background-color: #62afb4;
+    transition: all 0.5s;
+}
+
+.mas_info .habilidades
+{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: grid;
+    place-items: center;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.mas_info .habilidades .card
+{
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #62afb4;
+}
+
+.card img
+{
+    width: 45px;
+    height: 45px;
+}
+
+.card span
+{
+    font-weight: 600;
+}
+
+.edu
+{
+    display: none;
+    margin-top: 30px;
+}
+
+.edu .card_edu
+{
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.card_edu span
+{
+    font-size: 14px;
+}
+
+.interes
+{
+    display: none;
+    margin-top: 30px;
+    place-items: center;
+    place-items: center;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.interes .card_inte
+{
+    width: 100px;
+    height: 90px;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #62afb4;
+}
+
+.card_inte img
+{
+    width: 50px;
+    height: 50px;
+}
+
+/************************************************** PROYECTOS **************************************************/
+.proyectos
+{
+    width: 100%;;
+    height: 100%;
+    padding: 40px 10px;
+    margin-bottom: 50px;
+    display: grid;
+    place-items: center;
+}
+
+.proyectos h2
+{
+    margin-bottom: 20px;
+    color: #62afb4;
+}
+
+.container_cards
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container_cards .card_proyecto
+{
+    width: 300px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: #e9e9e9;
+    box-shadow: 0px 0px 30px -20px black ;
+}
+
+.card_imagen
+{
+    width: 100%;
+    height: 200px;
+}
+
+.card_imagen img
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card_contenido
+{
+    padding: 10px 14px;
+    text-align: center;
+}
+
+.card_contenido h4
+{
+    color: #62afb4;
+    margin: 10px;
+}
+
+.card_contenido a
+{
+    width: 120px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    color: #62afb4;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.card_contenido a:hover
+{
+   background-color: #62afb4;
+   color: #fff;
+}
+
+/************************************************** CONTACTO **************************************************/
+#contacto
+{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacto .contac
+{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.contac .datos_contacto
+{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    color: #62afb4;
+}
+
+.contac .iconos
+{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.contac .iconos a
+{
+    font-size: 25px;
+    padding: 5px;
+    color: #62afb4;
+}
+
+.contac .iconos a:hover
+{
+    font-size: 28px;
+    color: #AA72F7;
+}
+
+#contacto .formulario
+{
+    width: 50%;
+    padding: 50px;
+    margin-top: 20px;
+    background-color: #62afb4;
+}
+
+.formulario h3
+{
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.formulario form
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+
+form .inp
+{
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #d4d4d4;
+}
+
+form .aceptar
+{
+    width: 90%;
+    display: flex;
+}
+
+.aceptar p
+{
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+form #enviar
+{
+    font-size: 16px;
+    font-weight: 500;
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #0f5458;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+form #enviar:hover
+{
+    background-color: #b8b8b8;
+}
+
+/************************************************ FOOTER ***********************************************/
+footer
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px 20px 0px 0px;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    background-color: #357479;
+}
+
+footer ul
+{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+footer ul li
+{
+    list-style: none;
+}
+
+footer ul li a
+{
+    color: #fff;
+}
+
+footer p
+{
+    font-size: 10px;
+    margin-bottom: 15px;
+}
